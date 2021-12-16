@@ -24,4 +24,12 @@ class Sach extends Db
         $a =["%$kw%"];
         return $this->selectQuery($s, $a);
     }
+    public function locloai($id){
+        return $this->selectQuery('select * from sach where maloai=?', [$id]);
+        
+    }
+    public function locnxb($id){
+        return $this->selectQuery('select * from sach where manxb=?', [$id]);
+    
+    }
 }
