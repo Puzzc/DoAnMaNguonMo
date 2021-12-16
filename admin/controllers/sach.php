@@ -42,4 +42,17 @@ if($action=='add'){
     $data=$sach->allnxb();
   include 'sach/Frmaddsach.php';
 }
+if($action=='addbook'){
+    $id=isset($_POST['id'])?$_POST['id']:'';
+    $name=isset($_POST['name'])?$_POST['name']:'';
+    $price=isset($_POST['price'])?$_POST['price']:'';
+    $description=isset($_POST['description'])?$_POST['description']:'';
+    $img="";
+
+    }
+    $maNXB=isset($_POST['maNXB'])?$_POST['maNXB']:'';
+    $maLoai=isset($_POST['maLoai'])?$_POST['maLoai']:'';
+    $data=$sach->add($id,$name,$description,$price,$img,$maNXB,$maLoai);
+    include './views/sach/index.php';
+}
 ?>

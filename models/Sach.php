@@ -52,4 +52,10 @@ class Sach extends Db
     return $this->selectQuery('select * from sach');
    
 	}
+    public function add($id,$name,$des,$price,$img,$nxb,$loai){
+        $sql="INSERT INTO `sach`(`masach`, `tensach`, `mota`, `gia`, `hinh`, `manxb`, `maloai`) 
+        VALUES ('$id','$name','$des','$price','$img','$nxb','$loai')";
+        $data=$this->updateQuery($sql);
+        return $this->selectQuery('select * from sach');
+    }
 }
