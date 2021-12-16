@@ -45,4 +45,11 @@ class Sach extends Db
         $data = $this->selectQuery('select * from nhaxb where manxb=?', [$id]);
         return $data[0];
     }
+    public function delete($Id)
+	{
+		$sql = "DELETE FROM sach WHERE masach = '$Id'";
+	$data=$this->updateQuery($sql);
+    return $this->selectQuery('select * from sach');
+   
+	}
 }
