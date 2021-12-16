@@ -47,3 +47,12 @@ if($action=='locloai'){
  
     include 'views/sach/index.php';
 }
+if ($action=='detail')
+{
+    $id = isset($_GET['id'])?$_GET['id']:'';
+    $data =$sach->detail($id);
+    $loai=$sach->seltenloai($data['maloai']);
+    $nxb=$sach->seltennxb($data['manxb']);
+ 
+    include 'views/sach/detail.php';
+}
