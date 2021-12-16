@@ -58,4 +58,8 @@ class Sach extends Db
         $data=$this->updateQuery($sql);
         return $this->selectQuery('select * from sach');
     }
+    public function setedit($id){
+        $data = $this->selectQuery('select * from sach where masach=?', [$id]);
+        return $data[0];
+    }
 }

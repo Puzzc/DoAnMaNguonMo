@@ -57,6 +57,13 @@ if($action=='addbook'){
     $maNXB=isset($_POST['maNXB'])?$_POST['maNXB']:'';
     $maLoai=isset($_POST['maLoai'])?$_POST['maLoai']:'';
     $data=$sach->add($id,$name,$description,$price,$img,$maNXB,$maLoai);
-    include './views/sach/index.php';
+    include './sach/index.php';
+}
+if($action=='edit'){
+    $id=$_GET['id'];
+    $da=$sach->allloai();
+    $data=$sach->allnxb();
+    $ds=$sach->setedit($id);
+  include './sach/frmeditsach.php';
 }
 ?>
