@@ -1,0 +1,30 @@
+table{
+    table-layout: fixed;
+  }
+  
+  th, td {
+    padding: 5px 10px;
+  
+  }
+  
+  thead {
+      margin-top: 5%;
+    background: #f9f9f9;
+    display: table;
+    width: 100%;
+    width: calc(100% - 18px);
+  }
+  
+  tbody {
+    height: 400px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    
+  }
+  tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+      
