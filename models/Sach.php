@@ -45,4 +45,21 @@ class Sach extends Db
         $data = $this->selectQuery('select * from nhaxb where manxb=?', [$id]);
         return $data[0];
     }
+    public function delete($Id)
+	{
+		$sql = "DELETE FROM sach WHERE masach = '$Id'";
+	$data=$this->updateQuery($sql);
+    return $this->selectQuery('select * from sach');
+   
+	}
+    public function add($id,$name,$des,$price,$img,$nxb,$loai){
+        $sql="INSERT INTO `sach`(`masach`, `tensach`, `mota`, `gia`, `hinh`, `manxb`, `maloai`) 
+        VALUES ('$id','$name','$des','$price','$img','$nxb','$loai')";
+        $data=$this->updateQuery($sql);
+        return $this->selectQuery('select * from sach');
+    }
+    public function setedit($id){
+        $data = $this->selectQuery('select * from sach where masach=?', [$id]);
+        return $data[0];
+    }
 }
