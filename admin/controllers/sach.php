@@ -37,7 +37,7 @@ if ($action=='delete') {
     $data=$sach->delete($id);
      include './sach/index.php';
 }
-if($action=='a'){
+if($action=='add'){
     $da=$sach->allloai();
     $data=$sach->allnxb();
   include 'sach/Frmaddsach.php';
