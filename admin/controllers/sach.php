@@ -48,7 +48,11 @@ if($action=='addbook'){
     $price=isset($_POST['price'])?$_POST['price']:'';
     $description=isset($_POST['description'])?$_POST['description']:'';
     $img="";
-
+    if($_FILES['img']['error']==0){
+        $img=$_FILES['img']['name'];
+        $rootDir = realpath($_SERVER["DOCUMENT_ROOT"]);
+    move_uploaded_file($_FILES['img']['tmp_name'],$rootDir.'/tuan6-1123/gk/assets/img/book/'.$img);
+    
     }
     $maNXB=isset($_POST['maNXB'])?$_POST['maNXB']:'';
     $maLoai=isset($_POST['maLoai'])?$_POST['maLoai']:'';
