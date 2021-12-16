@@ -18,4 +18,10 @@ class Sach extends Db
     function allloai(){
         return $this->selectQuery('SELECT * FROM `loai` ');
     }
+    function search($kw)
+    {
+        $s ='select * from Sach where tensach like ?';
+        $a =["%$kw%"];
+        return $this->selectQuery($s, $a);
+    }
 }
