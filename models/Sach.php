@@ -41,6 +41,7 @@ class Sach extends Db
         $data = $this->selectQuery('select * from loai where maloai=?', [$id]);
         return $data[0];
     }
+    //get ten loai
     public function seltennxb($id){
         $data = $this->selectQuery('select * from nhaxb where manxb=?', [$id]);
         return $data[0];
