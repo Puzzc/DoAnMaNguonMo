@@ -37,7 +37,7 @@
         <?php 
         if ($controller=='sach')
         {
-            include 'controllers/sach.php';
+            include './controllers/sach.php';
         }
 
  
