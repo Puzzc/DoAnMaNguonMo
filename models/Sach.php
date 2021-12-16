@@ -20,7 +20,7 @@ class Sach extends Db
     }
     function search($kw)
     {
-        $s ='select * from Sach where tensach like ?';
+        $s ='select * from sach where tensach like ?';
         $a =["%$kw%"];
         return $this->selectQuery($s, $a);
     }
