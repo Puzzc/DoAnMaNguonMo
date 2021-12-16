@@ -29,7 +29,7 @@ if ($action=='search')
     $locnxb=$sach->allnxb();
     include 'views/sach/index.php';
 }
-if($action=='loc'){
+if($action=='locnxb'){
     $id = isset($_GET['id'])?$_GET['id']:'';
  
     $locloai=$sach->allloai();
@@ -38,7 +38,7 @@ if($action=='loc'){
  
     include 'views/sach/index.php';
 }
-if($action=='loc'){
+if($action=='locloai'){
     $id = isset($_GET['id'])?$_GET['id']:'';
  
     $locloai=$sach->allloai();
