@@ -37,4 +37,12 @@ class Sach extends Db
         $data = $this->selectQuery('select * from sach where masach=?', [$id]);
         return $data[0];
     }
+    public function seltenloai($id){
+        $data = $this->selectQuery('select * from loai where maloai=?', [$id]);
+        return $data[0];
+    }
+    public function seltennxb($id){
+        $data = $this->selectQuery('select * from nhaxb where manxb=?', [$id]);
+        return $data[0];
+    }
 }
